@@ -420,7 +420,7 @@ main(int argc, char *argv[])
     nfc_perror(pnd, "nfc_emulate_target");
     nfc_close(pnd);
     nfc_exit(context);
-    exit(EXIT_FAILURE);
+    exit(EXIT_SUCCESS);
   }
 
   if (argc == (3 + options)) {
@@ -428,7 +428,7 @@ main(int argc, char *argv[])
       printf("Can't save NDEF file '%s'", argv[2 + options]);
       nfc_close(pnd);
       nfc_exit(context);
-      exit(EXIT_FAILURE);
+      exit(EXIT_SUCCESS);
     }
   }
 
